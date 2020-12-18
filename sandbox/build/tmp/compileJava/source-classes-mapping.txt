@@ -1,0 +1,4 @@
+ru/stqa/sandbox/Point.java
+ ru.stqa.sandbox.Point
+ru/stqa/sandbox/Learning.java
+ ru.stqa.sandbox.Learning
