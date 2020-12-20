@@ -1,4 +1,6 @@
-ru/stqa/addressbook/TestGroupCreation.java
- ru.stqa.addressbook.TestGroupCreation
 ru/stqa/addressbook/GroupData.java
  ru.stqa.addressbook.GroupData
+ru/stqa/addressbook/TestBase.java
+ ru.stqa.addressbook.TestBase
+ru/stqa/addressbook/TestGroupCreation.java
+ ru.stqa.addressbook.TestGroupCreation

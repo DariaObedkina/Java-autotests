@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.addressbook.TestGroupCreation" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-20T14:36:34" hostname="VAIO" time="21.086">
+<testsuite name="ru.stqa.addressbook.TestGroupCreation" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-20T14:53:01" hostname="VAIO" time="14.23">
   <properties/>
-  <testcase name="testGroupCreation" classname="ru.stqa.addressbook.TestGroupCreation" time="21.086"/>
+  <testcase name="testGroupCreation" classname="ru.stqa.addressbook.TestGroupCreation" time="14.23"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[1608474995208	geckodriver	INFO	Listening on 127.0.0.1:28552
-1608474996055	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Daria\\AppData\\Local\\Temp\\rust_mozprofileLx0wql"
+  <system-err><![CDATA[1608475982443	geckodriver	INFO	Listening on 127.0.0.1:3099
+1608475983264	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Daria\\AppData\\Local\\Temp\\rust_mozprofileyXTmIm"
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-[Parent 9704, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
-1608475008672	Marionette	INFO	Listening on port 51404
-1608475009678	Marionette	WARN	TLS certificate errors will be ignored for this session
-дек 20, 2020 5:36:49 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1608475991268	Marionette	INFO	Listening on port 52391
+1608475991596	Marionette	WARN	TLS certificate errors will be ignored for this session
+дек 20, 2020 5:53:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1608475014017	Marionette	INFO	Stopped listening on port 51404
+1608475994664	Marionette	INFO	Stopped listening on port 52391
+[Parent 7412, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
 
 ]]></system-err>
 </testsuite>
