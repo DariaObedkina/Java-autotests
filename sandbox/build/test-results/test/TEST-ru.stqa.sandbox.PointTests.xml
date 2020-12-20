@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ru.stqa.sandbox.PointTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-19T19:51:27" hostname="VAIO" time="0.008">
+<testsuite name="ru.stqa.sandbox.PointTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-20T10:57:02" hostname="VAIO" time="0.007">
   <properties/>
-  <testcase name="testDistnce" classname="ru.stqa.sandbox.PointTests" time="0.008"/>
+  <testcase name="testDistnce" classname="ru.stqa.sandbox.PointTests" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
