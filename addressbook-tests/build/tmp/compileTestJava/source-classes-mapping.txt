@@ -1,10 +1,12 @@
+ru/stqa/addressbook/model/GroupData.java
+ ru.stqa.addressbook.model.GroupData
 ru/stqa/addressbook/tests/TestGroupCreation.java
  ru.stqa.addressbook.tests.TestGroupCreation
 ru/stqa/addressbook/tests/TestBase.java
  ru.stqa.addressbook.tests.TestBase
 ru/stqa/addressbook/appmanager/ApplicationManager.java
  ru.stqa.addressbook.appmanager.ApplicationManager
-ru/stqa/addressbook/model/GroupData.java
- ru.stqa.addressbook.model.GroupData
+ru/stqa/addressbook/appmanager/GroupHelper.java
+ ru.stqa.addressbook.appmanager.GroupHelper
 ru/stqa/addressbook/tests/TestGroupDeletion.java
  ru.stqa.addressbook.tests.TestGroupDeletion
