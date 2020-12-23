@@ -10,6 +10,8 @@ import static org.junit.Assert.fail;
 
 public class ApplicationManager {
     WebDriver driver;
+    private SessionHelper sessionHelper;
+    private NavigationHelper navigationHelper ;
     private GroupHelper groupHelper;
     private StringBuffer verificationErrors = new StringBuffer();
 
@@ -18,7 +20,9 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.get("https://localhost/addressbook/#");
         groupHelper = new GroupHelper(driver);
-        login("admin", "secret");
+        navigationHelper = new NavigationHelper(driver);
+        sessionHelper = new SessionHelper(driver);
+        sessionHelper.login("admin", "secret");
     }
 
     public void stop() {
@@ -29,17 +33,12 @@ public class ApplicationManager {
         }
     }
 
-    private void login(String username, String password) {
-      driver.findElement(By.name("user")).sendKeys(username);
-      driver.findElement(By.name("pass")).sendKeys(password);
-      driver.findElement(By.xpath("//input[@value='Login']")).click();
-    }
-
-    public void gotoGroupPage() {
-      driver.findElement(By.linkText("groups")).click();
-    }
 
     public GroupHelper getGroupHelper() {
         return groupHelper;
+    }
+
+    public NavigationHelper getNavigationHelper() {
+        return navigationHelper;
     }
 }
