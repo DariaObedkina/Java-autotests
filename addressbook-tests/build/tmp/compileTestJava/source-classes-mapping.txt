@@ -8,5 +8,11 @@ ru/stqa/addressbook/appmanager/ApplicationManager.java
  ru.stqa.addressbook.appmanager.ApplicationManager
 ru/stqa/addressbook/appmanager/GroupHelper.java
  ru.stqa.addressbook.appmanager.GroupHelper
+ru/stqa/addressbook/appmanager/HelperBase.java
+ ru.stqa.addressbook.appmanager.HelperBase
+ru/stqa/addressbook/appmanager/NavigationHelper.java
+ ru.stqa.addressbook.appmanager.NavigationHelper
 ru/stqa/addressbook/tests/TestGroupDeletion.java
  ru.stqa.addressbook.tests.TestGroupDeletion
+ru/stqa/addressbook/appmanager/SessionHelper.java
+ ru.stqa.addressbook.appmanager.SessionHelper
