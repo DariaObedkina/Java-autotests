@@ -20,7 +20,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void submitContactCreation() {
-        click(By.xpath("(//input[@name='submit'])[2]"));
+        click(By.name("submit"));
     }
 
     public void selectContact() {
@@ -40,6 +40,6 @@ public class ContactHelper extends HelperBase {
     }
 
     public void submitContactModification() {
-        click(By.xpath("(//input[@value='update'])[2]"));
+        click(By.name("update"));
     }
 }

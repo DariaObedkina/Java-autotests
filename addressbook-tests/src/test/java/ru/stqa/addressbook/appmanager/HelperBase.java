@@ -33,7 +33,7 @@ public class HelperBase {
             return true;
         } catch (NoSuchElementException ex) {
             return false;
-        }         
+        }
     }
 
     public void acceptAlert() {
