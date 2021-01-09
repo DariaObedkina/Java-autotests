@@ -15,7 +15,7 @@ public class ApplicationManager {
 
     WebDriver driver;
     private SessionHelper sessionHelper;
-    private NavigationHelper navigationHelper ;
+    private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private ContactHelper contactHelper;
     private StringBuffer verificationErrors = new StringBuffer();

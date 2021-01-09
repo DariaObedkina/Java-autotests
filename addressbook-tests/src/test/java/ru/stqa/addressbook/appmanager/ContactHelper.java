@@ -2,7 +2,9 @@ package ru.stqa.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.BrowserType;
 import ru.stqa.addressbook.model.ContactData;
+import ru.stqa.addressbook.tests.TestBase;
 
 public class ContactHelper extends HelperBase {
 
@@ -41,5 +43,15 @@ public class ContactHelper extends HelperBase {
 
     public void submitContactModification() {
         click(By.name("update"));
+    }
+
+
+    public void createContact(ContactData contact) {
+        fillContactForm(contact);
+        submitContactCreation();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.name("selected[]"));
     }
 }
