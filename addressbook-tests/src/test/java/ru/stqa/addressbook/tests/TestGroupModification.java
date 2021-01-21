@@ -1,5 +1,6 @@
 package ru.stqa.addressbook.tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import ru.stqa.addressbook.model.GroupData;
 
@@ -11,10 +12,13 @@ public class TestGroupModification extends TestBase {
         if (! app.getGroupHelper().isThereAGroup()) {
             app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
         }
+        int before = app.getGroupHelper().getGroupCount();
         app.getGroupHelper().selectGroup();
         app.getGroupHelper().initGroupModification();
         app.getGroupHelper().fillGroupForm(new GroupData("test1", "test", "test"));
         app.getGroupHelper().submitGroupModification();
         app.getGroupHelper().returnToGroupPage();
+        int after = app.getGroupHelper().getGroupCount();
+        Assert.assertEquals(before,after);
     }
 }
