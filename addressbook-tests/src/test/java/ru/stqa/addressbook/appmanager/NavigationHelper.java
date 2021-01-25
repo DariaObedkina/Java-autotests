@@ -2,6 +2,9 @@ package ru.stqa.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class NavigationHelper extends HelperBase {
 
@@ -43,6 +46,11 @@ public class NavigationHelper extends HelperBase {
             return;
         }
         click(By.linkText("home page"));
+    }
+
+    public WebElement waitForHomePage() {
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("maintable")));
     }
 
 }

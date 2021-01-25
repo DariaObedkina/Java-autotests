@@ -1,8 +1,11 @@
 package ru.stqa.addressbook.tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import ru.stqa.addressbook.model.ContactData;
 import ru.stqa.addressbook.model.GroupData;
+
+import java.util.List;
 
 public class TestContactDeletion extends TestBase {
 
@@ -13,8 +16,15 @@ public class TestContactDeletion extends TestBase {
             app.getContactHelper().createContact(new ContactData("TestName","TestLastName","TestNick","TestAddress","123456789", "test@test.test"));
             app.getNavigationHelper().returnToHomePage();
         }
-        app.getContactHelper().selectContact();
+        List<ContactData> contactsBefore = app.getContactHelper().getContactList();
+        app.getContactHelper().selectContact(contactsBefore.size()-1);
         app.getContactHelper().deleteSelectedContacts();
         app.getContactHelper().acceptContactAlert();
+        app.getNavigationHelper().waitForHomePage();
+        List<ContactData> contactsAfter = app.getContactHelper().getContactList();
+        Assert.assertEquals(contactsAfter.size(), contactsBefore.size()-1);
+
+        contactsBefore.remove(contactsBefore.size()-1);
+        Assert.assertEquals(contactsBefore,contactsAfter);
     }
 }
