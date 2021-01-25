@@ -24,7 +24,7 @@ ru/stqa/addressbook/tests/TestContactModification.java
  ru.stqa.addressbook.tests.TestContactModification
 ru/stqa/addressbook/tests/TestContactCreation.java
  ru.stqa.addressbook.tests.TestContactCreation
-ru/stqa/addressbook/tests/TestGroupModification.java
- ru.stqa.addressbook.tests.TestGroupModification
 ru/stqa/addressbook/tests/TestGroupDeletion.java
  ru.stqa.addressbook.tests.TestGroupDeletion
+ru/stqa/addressbook/tests/TestGroupModification.java
+ ru.stqa.addressbook.tests.TestGroupModification
