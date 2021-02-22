@@ -11,10 +11,7 @@ public class TestGroupDeletion extends TestBase {
 
   @Test
   public void testGroupDeletion() throws Exception {
-    app.getNavigationHelper().gotoGroupPage();
-    if (! app.getGroupHelper().isThereAGroup()) {
-      app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
-    }
+    ensurePreconditions();
     List<GroupData> before = app.getGroupHelper().getGroupList();
     app.getGroupHelper().selectGroup(before.size()-1);
     app.getGroupHelper().deleteSelectedGroups();
@@ -25,6 +22,13 @@ public class TestGroupDeletion extends TestBase {
     before.remove(before.size()-1);
       Assert.assertEquals(before,after);
 
+  }
+
+  public void ensurePreconditions() {
+    app.getNavigationHelper().gotoGroupPage();
+    if (! app.getGroupHelper().isThereAGroup()) {
+      app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
+    }
   }
 
 }

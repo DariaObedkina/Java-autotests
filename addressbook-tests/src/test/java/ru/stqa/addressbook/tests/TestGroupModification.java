@@ -12,21 +12,15 @@ public class TestGroupModification extends TestBase {
 
     @Test
     public void testGroupModification() throws Exception {
-        app.getNavigationHelper().gotoGroupPage();
-        if (! app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
-        }
+        ensurePreconditions();
         List<GroupData> before = app.getGroupHelper().getGroupList();
-        app.getGroupHelper().selectGroup(before.size()-1);
-        app.getGroupHelper().initGroupModification();
-        GroupData group = new GroupData(before.get(before.size()-1).getId(),"test1", "test", "test");
-        app.getGroupHelper().fillGroupForm(group);
-        app.getGroupHelper().submitGroupModification();
-        app.getGroupHelper().returnToGroupPage();
+        int index = before.size()-1;
+        GroupData group = new GroupData(before.get(index).getId(),"test1", "test", "test");
+        app.getGroupHelper().modifyGroup(index, group);
         List<GroupData> after = app.getGroupHelper().getGroupList();
         Assert.assertEquals(before.size(),after.size());
 
-        before.remove(before.size()-1);
+        before.remove(index);
         before.add(group);
         Comparator<? super GroupData> byId = (g1,g2) -> Integer.compare(g1.getId(),g2.getId());
         before.sort(byId);
@@ -34,4 +28,12 @@ public class TestGroupModification extends TestBase {
         Assert.assertEquals(before, after);
 
     }
+
+    public void ensurePreconditions() {
+        app.getNavigationHelper().gotoGroupPage();
+        if (! app.getGroupHelper().isThereAGroup()) {
+            app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
+        }
+    }
+
 }
