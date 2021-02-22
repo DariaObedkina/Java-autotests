@@ -5,7 +5,6 @@ import org.junit.Test;
 import ru.stqa.addressbook.model.GroupData;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class TestGroupModification extends TestBase {
@@ -13,11 +12,11 @@ public class TestGroupModification extends TestBase {
     @Test
     public void testGroupModification() throws Exception {
         ensurePreconditions();
-        List<GroupData> before = app.getGroupHelper().getGroupList();
+        List<GroupData> before = app.group().list();
         int index = before.size()-1;
         GroupData group = new GroupData(before.get(index).getId(),"test1", "test", "test");
-        app.getGroupHelper().modifyGroup(index, group);
-        List<GroupData> after = app.getGroupHelper().getGroupList();
+        app.group().modify(index, group);
+        List<GroupData> after = app.group().list();
         Assert.assertEquals(before.size(),after.size());
 
         before.remove(index);
@@ -30,9 +29,9 @@ public class TestGroupModification extends TestBase {
     }
 
     public void ensurePreconditions() {
-        app.getNavigationHelper().gotoGroupPage();
-        if (! app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().createGroup(new GroupData("test", "test", "test"));
+        app.goTo().groupPage();
+        if (app.group().list().size() == 0) {
+            app.group().create(new GroupData("test", "test", "test"));
         }
     }
 
